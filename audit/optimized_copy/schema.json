@@ -1,0 +1,99 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://geovera.xyz/#organization",
+      "name": "GeoVera",
+      "url": "https://geovera.xyz",
+      "logo": "https://geovera.xyz/logo.png",
+      "description": "GeoVera adalah platform AI Brand Intelligence pertama di Indonesia yang menyatukan SEO, GEO (Generative Engine Optimization), dan Social Search scoring dalam satu sistem — dikelola 100% via WhatsApp.",
+      "foundingDate": "2026",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Jakarta, Indonesia"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+62-815-994-4200",
+          "contactType": "customer service",
+          "availableLanguage": ["id", "en"],
+          "areaServed": "ID"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Puri Mansion, Atlanta VI No. 8",
+        "addressLocality": "Jakarta",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://wa.me/628159944200",
+        "https://instagram.com/geovera.ai"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://geovera.xyz/#software",
+      "name": "GeoVera",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "WhatsApp",
+      "description": "Platform AI Brand Intelligence yang mengukur GEO Score — seberapa sering AI seperti ChatGPT, Perplexity, dan Gemini merekomendasikan brand Anda. Menyatukan SEO + GEO + Social Search scoring, dikelola 100% via WhatsApp.",
+      "featureList": [
+        "GEO Score — AI Search Visibility Measurement",
+        "SEO Intelligence & Google Ranking Tracker",
+        "Social Search Optimization (TikTok, Instagram, YouTube)",
+        "AI Content Studio (Article, Image, Video Generation)",
+        "8 AI Specialists (Strategy, Marketing, Analytics, Creative)",
+        "20+ Platform Integrations (Google, Meta, TikTok, Shopee, Tokopedia)",
+        "Daily WhatsApp Intelligence Reports",
+        "Automated Marketing Campaign Execution"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Go",
+          "price": "4900000",
+          "priceCurrency": "IDR",
+          "priceValidUntil": "2027-12-31",
+          "url": "https://geovera.xyz/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "8900000",
+          "priceCurrency": "IDR",
+          "priceValidUntil": "2027-12-31",
+          "url": "https://geovera.xyz/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "price": "16900000",
+          "priceCurrency": "IDR",
+          "priceValidUntil": "2027-12-31",
+          "url": "https://geovera.xyz/#pricing"
+        }
+      ],
+      "provider": {
+        "@id": "https://geovera.xyz/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://geovera.xyz/#website",
+      "name": "GeoVera",
+      "url": "https://geovera.xyz",
+      "description": "Platform GEO & AI Search Intelligence pertama di Indonesia",
+      "publisher": {
+        "@id": "https://geovera.xyz/#organization"
+      },
+      "inLanguage": "id"
+    }
+  ]
+}
