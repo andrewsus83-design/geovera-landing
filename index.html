@@ -1154,6 +1154,14 @@ footer::before{
   .wrap,.wrap-md,.wrap-sm{padding:0 clamp(16px,4vw,24px);}
   /* Bottom sticky CTA padding */
   body{padding-bottom:68px;}
+  /* Hero: pad-top clears fixed navbar (68px) + 12px breathing room; downscale ~8% */
+  .hero{padding-top:80px;padding-bottom:48px;}
+  .hero-title{font-size:clamp(30px,8.5vw,52px);}
+  .hero-sub{font-size:var(--fs-xs);margin-bottom:12px;}
+  .hero-promise{gap:8px;margin-bottom:20px;}
+  .hero-promise-item{font-size:var(--fs-xs);}
+  .hero-ctas .btn-wa,.hero-ctas .btn-primary{padding:13px 24px;font-size:var(--fs-xs);}
+  .badge{font-size:var(--fs-3xs);padding:5px 12px;}
 }
 /* ── Integration logo theme colors ──────── */
 .int-logo{ color: #E8E8E8; }            /* default (dark mode) */
@@ -2321,6 +2329,19 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
   </div>
 </nav>
 </header>
+
+<!-- MOBILE STICKY BOTTOM CTA -->
+<div id="mob-sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:190;background:rgba(9,13,18,.96);backdrop-filter:blur(12px);border-top:1px solid rgba(22,163,74,.2);padding:10px 16px;align-items:center;justify-content:center;gap:10px;">
+  <a href="https://wa.me/628159944200" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:420px;background:#22C55E;color:#fff;font-family:var(--fd);font-weight:700;font-size:15px;padding:13px 20px;border-radius:12px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
+    Mulai Gratis — Audit GEO Score Brand Kamu via WhatsApp
+  </a>
+</div>
+<script>
+// Show sticky CTA only on mobile
+(function(){if(window.innerWidth<=640){var el=document.getElementById('mob-sticky-cta');if(el)el.style.display='flex';}})();
+window.addEventListener('resize',function(){var el=document.getElementById('mob-sticky-cta');if(el)el.style.display=window.innerWidth<=640?'flex':'none';});
+</script>
 
 <div id="page-home">
 <main>
@@ -4809,35 +4830,12 @@ window.addEventListener('popstate', () => {
 })();
 </script>
 
-<!-- MOBILE STICKY BOTTOM CTA -->
-<style>
-#mob-sticky-cta{
-  display:none;
-  position:fixed;bottom:0;left:0;right:0;z-index:190;
-  background:rgba(9,13,18,.96);
-  backdrop-filter:blur(12px);
-  border-top:1px solid var(--ga20);
-  padding:10px 16px;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-}
-#mob-sticky-cta a{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  width:100%;max-width:420px;
-  background:var(--g5);color:#fff;
-  font-family:var(--fd);font-weight:700;font-size:15px;
-  padding:13px 20px;border-radius:var(--r6);
-  text-decoration:none;
-  -webkit-tap-highlight-color:transparent;
-}
-@media(max-width:640px){#mob-sticky-cta{display:flex;}}
-</style>
-<div id="mob-sticky-cta">
-  <a href="https://wa.me/628159944200" target="_blank" rel="noopener">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
-    Mulai Gratis — Audit GEO Score Brand Kamu via WhatsApp
-  </a>
-</div>
+<script>
+// Move sticky CTA to body root (escapes any parser nesting issues)
+document.addEventListener('DOMContentLoaded',function(){
+  var el = document.getElementById('mob-sticky-cta');
+  if(el && el.parentElement !== document.body) document.body.appendChild(el);
+});
+</script>
 
 </body>
