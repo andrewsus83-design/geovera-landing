@@ -311,13 +311,14 @@ body.light-mode #theme-toggle:hover{box-shadow:0 6px 28px rgba(0,0,0,.18);}
   text-transform:uppercase;color:var(--t3);
   writing-mode:vertical-rl;text-orientation:mixed;
 }
-@media(max-width:640px){#theme-toggle{left:8px;padding:8px 6px;}}
+@media(max-width:640px){#theme-toggle{left:8px;padding:8px 6px;transform:translateY(-50%) scale(0.8);transform-origin:left center;}
+#theme-toggle:hover{transform:translateY(-50%) scale(0.84);}}
 
 /* ════════════════════════════════════════════
    RESET & BASE
 ════════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;}
 body{
   /* Natural gradient river — sections breathe, no hard blocks */
   background:
@@ -1144,6 +1145,15 @@ footer::before{
   .hero-ctas{flex-direction:column;align-items:center;}
   .cta-box{padding:48px clamp(20px,5vw,48px);}
   .trust-row{gap:20px;}
+  /* Mobile menu font 30% smaller: 40px → 28px */
+  .mob-link{font-size:28px;}
+  /* Login button 15% smaller */
+  .nav-right .btn-ghost{padding:6px 14px;font-size:13px;}
+  /* Prevent horizontal scroll / layout shift */
+  body,html{max-width:100vw;}
+  .wrap,.wrap-md,.wrap-sm{padding:0 clamp(16px,4vw,24px);}
+  /* Bottom sticky CTA padding */
+  body{padding-bottom:68px;}
 }
 /* ── Integration logo theme colors ──────── */
 .int-logo{ color: #E8E8E8; }            /* default (dark mode) */
@@ -4798,5 +4808,36 @@ window.addEventListener('popstate', () => {
   showPage(['blog','service','faq','contact'].includes(h) ? h : 'home');
 })();
 </script>
+
+<!-- MOBILE STICKY BOTTOM CTA -->
+<style>
+#mob-sticky-cta{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:190;
+  background:rgba(9,13,18,.96);
+  backdrop-filter:blur(12px);
+  border-top:1px solid var(--ga20);
+  padding:10px 16px;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+#mob-sticky-cta a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;max-width:420px;
+  background:var(--g5);color:#fff;
+  font-family:var(--fd);font-weight:700;font-size:15px;
+  padding:13px 20px;border-radius:var(--r6);
+  text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+}
+@media(max-width:640px){#mob-sticky-cta{display:flex;}}
+</style>
+<div id="mob-sticky-cta">
+  <a href="https://wa.me/628159944200" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
+    Mulai Gratis — Audit GEO Score Brand Kamu via WhatsApp
+  </a>
+</div>
 
 </body>
