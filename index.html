@@ -139,6 +139,28 @@
   /* ── Shadows ──────────────────────────────────────── */
   --sh-green:0 0 40px rgba(22,163,74,.2),0 0 80px rgba(22,163,74,.08);
   --sh-card:0 1px 3px rgba(0,0,0,.4),0 4px 24px rgba(0,0,0,.2);
+
+  /* ── Pillar Tints ─────────────────────────────────── */
+  --di-8:rgba(56,189,248,.08);    /* Discovery tint */
+  --di-18:rgba(56,189,248,.18);   /* Discovery border */
+  --di-25:rgba(56,189,248,.25);
+  --au-8:rgba(252,211,77,.08);    /* Authority tint */
+  --au-18:rgba(252,211,77,.18);   /* Authority border */
+  --au-25:rgba(252,211,77,.25);
+  --pur-8:rgba(167,139,250,.08);  /* Purple tint */
+  --pur-18:rgba(167,139,250,.18); /* Purple border */
+  --pur-25:rgba(167,139,250,.25);
+  --vi-8:rgba(129,140,248,.08);   /* Visibility tint */
+  --vi-18:rgba(129,140,248,.18);  /* Visibility border */
+
+  /* ── Social Platform Colors ─────────────────────── */
+  --social-wa:#25D366;
+  --social-ig:rgba(225,48,108,.2);
+  --social-fb:rgba(24,119,242,.15);
+  --social-yt:rgba(255,0,0,.12);
+
+  /* ── Extra Spacing ──────────────────────────────── */
+  --space-7:28px; --space-9:36px;
 }
 
 /* ════════════════════════════════════════════
@@ -172,13 +194,13 @@ body.light-mode{
 }
 body.light-mode nav{background:#FFFFFF!important;border-bottom:none;}
 body.light-mode .nav.solid{background:rgba(255,255,255,.98)!important;backdrop-filter:blur(12px);border-bottom:none;}
-body.light-mode .card{background:#FFFFFF;border-color:rgba(0,0,0,.09);}
-body.light-mode .feat-card{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
-body.light-mode .persona-card{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
-body.light-mode .how-card{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
-body.light-mode .benefit{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
-body.light-mode .faq-item{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
-body.light-mode .blog-card{background:#FFFFFF;border-color:rgba(0,0,0,.08);}
+body.light-mode .card{background:var(--base);border-color:rgba(0,0,0,.09);}
+body.light-mode .feat-card{background:var(--base);border-color:rgba(0,0,0,.08);}
+body.light-mode .persona-card{background:var(--base);border-color:rgba(0,0,0,.08);}
+body.light-mode .how-card{background:var(--base);border-color:rgba(0,0,0,.08);}
+body.light-mode .benefit{background:var(--base);border-color:rgba(0,0,0,.08);}
+body.light-mode .faq-item{background:var(--base);border-color:rgba(0,0,0,.08);}
+body.light-mode .blog-card{background:var(--base);border-color:rgba(0,0,0,.08);}
 
 body.light-mode section{background:transparent!important;color:var(--t1);}
 body.light-mode section::before{background:none!important;}
@@ -225,7 +247,7 @@ body.light-mode .problem-solution{
   background:var(--s1);border-color:var(--b1);
   box-shadow:0 1px 4px rgba(0,0,0,.06);
 }
-body.light-mode .int-card{background:#FFFFFF;border-color:rgba(0,0,0,.09);}
+body.light-mode .int-card{background:var(--base);border-color:rgba(0,0,0,.09);}
 body.light-mode .int-card:hover{background:#F5F5F5;}
 body.light-mode .cta-box{background:var(--s0);border-color:var(--b2);}
 body.light-mode footer{background:transparent;border-top:1px solid rgba(0,0,0,.06);}
@@ -478,7 +500,7 @@ body:not(.light-mode) section:nth-child(odd)::before{
 .btn-ghost:hover{background:var(--b2);border-color:var(--b3);transform:translateY(-1px);}
 .btn-wa{
   background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);
-  color:#fff;
+  color:var(--white);
   box-shadow:0 4px 20px rgba(37,211,102,.2);
 }
 .btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,211,102,.3);}
@@ -505,9 +527,9 @@ body:not(.light-mode) section:nth-child(odd)::before{
   background:var(--b0);border:1px solid var(--b1);color:var(--t3);
 }
 .tag.green{background:var(--ga6);border-color:var(--ga20);color:var(--g5);}
-.tag.blue{background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.2);color:var(--di);}
-.tag.amber{background:rgba(252,211,77,.08);border-color:rgba(252,211,77,.2);color:var(--au);}
-.tag.pur{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.2);color:var(--pur);}
+.tag.blue{background:var(--di-8);border-color:var(--di-18);color:var(--di);}
+.tag.amber{background:var(--au-8);border-color:var(--au-18);color:var(--au);}
+.tag.pur{background:var(--pur-8);border-color:var(--pur-18);color:var(--pur);}
 
 /* ════════════════════════════════════════════
    COMPONENTS: CARDS
@@ -737,7 +759,7 @@ body.light-mode .logo-chip{ color:#3D5070; }
 }
 .m-green{ background:rgba(34,197,94,.12);color:var(--g4);border:1px solid rgba(34,197,94,.2); }
 .m-blue{ background:rgba(96,165,250,.1);color:var(--blu);border:1px solid rgba(96,165,250,.2); }
-.m-amber{ background:rgba(252,211,77,.1);color:var(--au);border:1px solid rgba(252,211,77,.2); }
+.m-amber{ background:rgba(252,211,77,.1);color:var(--au);border:1px solid var(--au-18); }
 
 .wa-typing{
   display:flex;align-items:center;gap:4px;
@@ -1172,8 +1194,8 @@ footer::before{
   .badge{font-size:var(--fs-3xs);padding:5px 12px;}
 }
 /* ── Integration logo theme colors ──────── */
-.int-logo{ color: #E8E8E8; }            /* default (dark mode) */
-body.light-mode .int-logo{ color: #1C1C1E; }  /* light mode */
+.int-logo{ color: var(--t2); }            /* default (dark mode) */
+body.light-mode .int-logo{ color: var(--t1); }  /* light mode */
 
 /* ── SERVICE PAGE ─────────────────────────────── */
 .svc-card:hover{border-color:var(--ga20);box-shadow:0 12px 40px rgba(0,0,0,.3);}
@@ -1464,9 +1486,9 @@ footer h6,.foot-col h6,.foot-grid>div>h6{font-family:var(--fd);font-weight:700;f
 /* ── Icon containers (token-aligned) ─────────── */
 .ic-wrap{flex-shrink:0;width:56px;height:56px;border-radius:var(--r6);display:flex;align-items:center;justify-content:center;}
 .ic-wrap-green{background:rgba(22,163,74,.1);border:1px solid var(--ga25);}
-.ic-wrap-sky{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);}
+.ic-wrap-sky{background:rgba(56,189,248,.1);border:1px solid var(--di-18);}
 .ic-wrap-indigo{background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.2);}
-.ic-wrap-amber{background:rgba(252,211,77,.1);border:1px solid rgba(252,211,77,.2);}
+.ic-wrap-amber{background:rgba(252,211,77,.1);border:1px solid var(--au-18);}
 .ic-wrap-red{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2);}
 
 /* ── Service page ─────────────────────────────── */
@@ -1485,9 +1507,9 @@ footer h6,.foot-col h6,.foot-grid>div>h6{font-family:var(--fd);font-weight:700;f
 .svc-mini{margin-top:var(--space-6);padding:var(--space-4);background:var(--s0);border-radius:var(--r5);border:1px solid var(--b1);}
 .svc-pill{padding:5px var(--space-3);border-radius:var(--full);font-size:var(--fs-2xs);font-family:var(--fm);}
 .svc-pill-vi{background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.2);color:var(--vi);}
-.svc-pill-di{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:var(--di);}
+.svc-pill-di{background:rgba(56,189,248,.1);border:1px solid var(--di-18);color:var(--di);}
 .svc-pill-green{background:var(--ga8);border:1px solid var(--ga25);color:var(--g4);}
-.svc-pill-au{background:rgba(252,211,77,.1);border:1px solid rgba(252,211,77,.2);color:var(--au);}
+.svc-pill-au{background:rgba(252,211,77,.1);border:1px solid var(--au-18);color:var(--au);}
 .svc-pill-red{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2);color:var(--red);}
 .svc-pill-ghost{background:var(--b1);border:1px solid var(--b2);color:var(--t3);}
 .svc-tile{padding:var(--space-3) var(--space-2);border-radius:var(--r5);background:var(--s0);border:1px solid var(--b1);text-align:center;}
@@ -2272,7 +2294,7 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
      MOBILE NAV
 ════════════════════════════════════════════ -->
 <div class="mob-nav" id="mobNav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-  <button style="align-self:flex-end;margin-bottom:8px;" class="icon-btn" id="mobClose" aria-label="Close menu">
+  <button style="align-self:flex-end;margin-bottom:var(--space-2);" class="icon-btn" id="mobClose" aria-label="Close menu">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
   <a href="#" class="mob-link" onclick="showPage('home');return false;">Home</a>
@@ -2280,7 +2302,7 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
   <a href="#" class="mob-link" onclick="showPage('faq');return false;">FAQ</a>
   <a href="#" class="mob-link" onclick="showPage('blog');return false;">Blog</a>
   <a href="#" class="mob-link" onclick="showPage('contact');return false;">Contact Us</a>
-  <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px;width:160px;align-self:flex-end;">
+  <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);width:160px;align-self:flex-end;">
     <a href="/login" class="btn btn-ghost btn-sm" style="font-size:var(--fs-xs);justify-content:center;">Log In</a>
     <a href="https://wa.me/628159944200" class="btn btn-primary btn-sm" target="_blank" rel="noopener" style="font-size:var(--fs-xs);justify-content:center;">Start Free</a>
   </div>
@@ -2334,7 +2356,7 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
 
 <!-- MOBILE STICKY BOTTOM CTA -->
 <div id="mob-sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:190;align-items:stretch;justify-content:center;">
-  <a href="https://wa.me/628159944200" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:7px;width:100%;background:#22C55E;color:#fff;font-family:var(--fd);font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:0;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+  <a href="https://wa.me/628159944200" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:7px;width:100%;background:var(--g5);color:var(--white);font-family:var(--fd);font-weight:700;font-size:var(--fs-xs);padding:var(--space-3) var(--space-5);border-radius:0;text-decoration:none;-webkit-tap-highlight-color:transparent;">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
     Brand Anda tidak muncul di ChatGPT? Cek GEO Score GRATIS — ukur visibilitas di 5 AI platform dalam 2 menit via WhatsApp
   </a>
@@ -2956,9 +2978,9 @@ window.addEventListener('resize',function(){var el=document.getElementById('mob-
         <div class="solution-preview">
           <div class="sol-header">
             <div class="sol-dots">
-              <div class="sol-dot" style="background:#F87171;"></div>
-              <div class="sol-dot" style="background:#FCD34D;"></div>
-              <div class="sol-dot" style="background:#4ADE80;"></div>
+              <div class="sol-dot" style="background:var(--red);"></div>
+              <div class="sol-dot" style="background:var(--au);"></div>
+              <div class="sol-dot" style="background:var(--g4);"></div>
             </div>
             <span style="font-family:var(--fm);font-size:var(--fs-2xs);color:var(--t3);margin-left:8px;">GeoVera via WhatsApp</span>
           </div>
@@ -2980,9 +3002,9 @@ window.addEventListener('resize',function(){var el=document.getElementById('mob-
             </div>
             <div class="sol-result">
               <span class="sol-tag" style="background:var(--ga12);color:var(--g5);border:1px solid var(--ga20);">✓ SEO Optimized</span>
-              <span class="sol-tag" style="background:rgba(56,189,248,.08);color:var(--di);border:1px solid rgba(56,189,248,.2);">✓ GEO Ready</span>
-              <span class="sol-tag" style="background:rgba(252,211,77,.08);color:var(--au);border:1px solid rgba(252,211,77,.2);">✓ Content Created</span>
-              <span class="sol-tag" style="background:rgba(167,139,250,.08);color:var(--pur);border:1px solid rgba(167,139,250,.2);">✓ Ads Optimized</span>
+              <span class="sol-tag" style="background:var(--di-8);color:var(--di);border:1px solid var(--di-18);">✓ GEO Ready</span>
+              <span class="sol-tag" style="background:var(--au-8);color:var(--au);border:1px solid var(--au-18);">✓ Content Created</span>
+              <span class="sol-tag" style="background:var(--pur-8);color:var(--pur);border:1px solid var(--pur-18);">✓ Ads Optimized</span>
             </div>
           </div>
         </div>
@@ -4377,7 +4399,7 @@ document.querySelector('.contact-form .btn-primary').addEventListener('click', f
 
           <!-- Phone -->
           <div class="ct-info-row">
-            <div class="ct-info-icon" style="background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.18);">
+            <div class="ct-info-icon" style="background:var(--di-8);border:1px solid var(--di-18);">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--di)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.15 6.15l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/>
               </svg>
@@ -4390,7 +4412,7 @@ document.querySelector('.contact-form .btn-primary').addEventListener('click', f
 
           <!-- Email -->
           <div class="ct-info-row">
-            <div class="ct-info-icon" style="background:rgba(252,211,77,.08);border:1px solid rgba(252,211,77,.18);">
+            <div class="ct-info-icon" style="background:var(--au-8);border:1px solid var(--au-18);">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--au)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
