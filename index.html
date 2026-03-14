@@ -1099,7 +1099,8 @@ footer::before{
 .mob-nav{
   display:none;position:fixed;inset:0;z-index:150;
   background:rgba(5,7,9,.97);backdrop-filter:blur(16px);
-  flex-direction:column;align-items:center;justify-content:center;
+  flex-direction:column;align-items:flex-end;justify-content:flex-start;
+  padding-top:72px;padding-right:20px;
   gap:8px;
 }
 .mob-nav.open{display:flex;}
@@ -2278,15 +2279,9 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
   <a href="#" class="mob-link" onclick="showPage('faq');return false;">FAQ</a>
   <a href="#" class="mob-link" onclick="showPage('blog');return false;">Blog</a>
   <a href="#" class="mob-link" onclick="showPage('contact');return false;">Contact Us</a>
-  <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;justify-content:center;">
-    <a href="/login" class="btn btn-ghost btn-lg mob-link" style="font-size:var(--fs-base);">Log In</a>
-    <a href="https://wa.me/628159944200" class="btn btn-primary btn-lg mob-link" target="_blank" rel="noopener" style="font-size:var(--fs-base);">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
-      Start Free
-    </a>
-  </div>
-  <div style="margin-top:20px;display:flex;gap:12px;">
-    <a href="https://wa.me/628159944200" class="btn btn-wa" target="_blank" rel="noopener">Start Free via WhatsApp</a>
+  <div style="display:flex;gap:10px;margin-top:20px;justify-content:flex-end;">
+    <a href="/login" class="btn btn-ghost btn-sm" style="font-size:var(--fs-xs);">Log In</a>
+    <a href="https://wa.me/628159944200" class="btn btn-primary btn-sm" target="_blank" rel="noopener" style="font-size:var(--fs-xs);">Start Free</a>
   </div>
 </div>
 
@@ -2337,8 +2332,8 @@ body.light-mode .svc-cta{background:linear-gradient(135deg,rgba(22,163,74,.04),#
 </header>
 
 <!-- MOBILE STICKY BOTTOM CTA -->
-<div id="mob-sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:190;background:rgba(9,13,18,.96);backdrop-filter:blur(12px);border-top:1px solid rgba(22,163,74,.2);padding:10px 16px;align-items:center;justify-content:center;gap:10px;">
-  <a href="https://wa.me/628159944200" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:420px;background:#22C55E;color:#fff;font-family:var(--fd);font-weight:700;font-size:15px;padding:13px 20px;border-radius:12px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+<div id="mob-sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:190;align-items:stretch;justify-content:center;">
+  <a href="https://wa.me/628159944200" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:7px;width:100%;background:#22C55E;color:#fff;font-family:var(--fd);font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:0;text-decoration:none;-webkit-tap-highlight-color:transparent;">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.657 1.435 5.163L2 22l4.949-1.386A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.05 14.4c-.21.59-1.04 1.08-1.73 1.22-.46.09-1.06.16-3.08-.66-2.58-1.05-4.24-3.64-4.37-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.83.87-2.08.22-.25.49-.31.65-.31h.47c.15 0 .36-.06.56.43l.72 1.9c.06.16.03.34-.07.48l-.31.4c-.1.13-.21.27-.09.53.46.93 1.16 1.72 1.92 2.32.83.66 1.71 1.04 1.94 1.15.23.11.37.09.5-.05l.66-.78c.17-.2.42-.25.65-.14l1.87.88c.22.1.37.15.42.24.06.12.06.68-.15 1.27z"/></svg>
     Mulai Gratis — Audit GEO Score Brand Kamu via WhatsApp
   </a>
